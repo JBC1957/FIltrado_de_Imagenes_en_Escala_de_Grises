@@ -1,4 +1,4 @@
-'''
+"""
     * Nombre: main.py
     * Enunciado:
     * Autor: Juan Francisco Benavente Carzolio
@@ -6,7 +6,7 @@
     * Asignatura: Sistemas Inteligentes
     * Fecha última modificación: 04/12/2025
     * Versión: v0.6
-'''
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -51,7 +51,7 @@ def add_gaussian_noise(img, sigma):
     return noisy_img
 
 
-sigma_ruido = 0.1 # Desde aquí podemos cambiar el nivel de ruido de la imagen.
+sigma_ruido = 0.0 # Desde aquí podemos cambiar el nivel de ruido de la imagen.
 
 # Imagen ruidosa: imagen original + ruido gaussiano.
 image_noisy = add_gaussian_noise(image_gray, sigma_ruido)
