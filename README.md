@@ -1,4 +1,4 @@
-# Práctica: Filtros espaciales y difusión anisotrópica
+# Filtros espaciales y difusión anisotrópica
 
 Este proyecto forma parte de la asignatura **Sistemas Inteligentes** (Universidad de Burgos).  
 El objetivo es cargar una imagen en escala de grises, añadirle ruido gaussiano y aplicar varios filtros espaciales clásicos, además de un filtro anisotrópico implementado a mano (tipo Perona–Malik), para comparar sus efectos.
