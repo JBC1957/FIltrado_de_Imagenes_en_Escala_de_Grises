@@ -1,0 +1,1 @@
+# FIltrado_de_Imagenes_en_Escala_de_Grises
