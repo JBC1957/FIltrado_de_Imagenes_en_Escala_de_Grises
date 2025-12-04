@@ -1,3 +1,13 @@
+'''
+    * Nombre: main.py
+    * Enunciado:
+    * Autor: Juan Francisco Benavente Carzolio
+    * Organización: Universidad de Burgos
+    * Asignatura: Sistemas Inteligentes
+    * Fecha última modificación: 04/12/2025
+    * Versión: v0.6
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -7,18 +17,18 @@ from skimage.filters import median, gaussian
 from skimage.morphology import square
 '''
 =====================================================
- 1. Cargar imagen y pasar a escala de grises
+ 1. Cargar imagen (ya en escala de grises)
 =====================================================
 '''
-image = io.imread("Cameraman.png")
+image = io.imread("Cameraman.png")  # debe estar en el mismo directorio
 
-# Si viene en color, la convertimos a escala de grises.
+# EXTRA: Si la imagen viniera a color la convertimos a escala de grises.
 if image.ndim == 3:
     image_gray = color.rgb2gray(image)
 else:
     image_gray = image
 
-# A float en [0, 1].
+# A float en [0, 1]
 image_gray = img_as_float(image_gray)
 
 '''
@@ -119,7 +129,7 @@ def anisotropic_diffusion(img, n_iter=15, k=20.0, lambda_param=0.25, option=1):
  7. Aplicar filtros
 =====================================================
 '''
-# Parámetros que puedes ajustar para el análisis.
+# Parámetros que puedes ajustar para el análisis
 kernel_media = 5
 kernel_mediana = 3
 sigma_gauss = 1.0
@@ -143,7 +153,7 @@ aniso_img = anisotropic_diffusion(
  8. Mostrar resultados
 =====================================================
 '''
-# 8.1 Original y ruidosa (1x2).
+# Original y ruidosa (1x2)
 fig1, axs1 = plt.subplots(1, 2, figsize=(8, 4))
 
 axs1[0].imshow(image_gray, cmap="gray")
@@ -157,7 +167,7 @@ axs1[1].axis("off")
 plt.tight_layout()
 plt.show()
 
-# 8.2 Cuadrantes 2x2 con los 4 filtros.
+# Cuadrantes 2x2 con los 4 filtros
 fig2, axs2 = plt.subplots(2, 2, figsize=(8, 8))
 
 axs2[0, 0].imshow(mean_img, cmap="gray")
